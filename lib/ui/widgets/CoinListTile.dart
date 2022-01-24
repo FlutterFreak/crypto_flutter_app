@@ -10,17 +10,21 @@ class CoinListTile extends StatelessWidget {
 
   CoinListTile({Key? key, required this.coinDetails, required this.onTap})
       : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      key: Key('coinListTile'),
       contentPadding: EdgeInsets.symmetric(vertical: 8, horizontal: 24),
       onTap: onTap,
-      leading: Image.network(
-        coinDetails!.image!,
-        cacheHeight: 24,
-        cacheWidth: 24,
+      leading: Container(
         height: 24,
         width: 24,
+        child: Image.network(
+          coinDetails.image!,
+          cacheHeight: 24,
+          cacheWidth: 24,
+        ),
       ),
       trailing: Container(
           width: 80,
@@ -38,20 +42,28 @@ class CoinListTile extends StatelessWidget {
               Row(
                 children: [
                   Text("High", style: TextStyle(fontSize: 8)),
-                  Spacer(),
-                  Text(
-                    "\$${coinDetails!.high_24h}",
-                    style: TextStyle(fontSize: 9, color: Colors.green),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Expanded(
+                    child: Text(
+                      "\$${coinDetails!.high_24h}",
+                      style: TextStyle(fontSize: 9, color: Colors.green),
+                    ),
                   ),
                 ],
               ),
               Row(
                 children: [
                   Text("Low", style: TextStyle(fontSize: 8)),
-                  Spacer(),
-                  Text(
-                    "\$${coinDetails!.low_24h}",
-                    style: TextStyle(fontSize: 9, color: Colors.red),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Expanded(
+                    child: Text(
+                      "\$${coinDetails!.low_24h}",
+                      style: TextStyle(fontSize: 9, color: Colors.red),
+                    ),
                   ),
                 ],
               ),

@@ -32,6 +32,7 @@ class _CurrencyCalculatorScreenState extends State<CurrencyCalculatorScreen> {
   @override
   Widget build(BuildContext context) {
     return Material(
+      key: Key('currencyCalculatorScreen'),
       child: Stack(
         children: [
           Container(

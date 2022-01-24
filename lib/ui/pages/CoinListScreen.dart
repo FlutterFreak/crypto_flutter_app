@@ -29,6 +29,7 @@ class _CoinListScreenState extends State<CoinListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: Key('coinListScreen'),
       appBar: AppBar(
         title: Text(
           'Coin List Page',

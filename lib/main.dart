@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      key: Key('myApp'),
       title: 'Flutter Crypto App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(

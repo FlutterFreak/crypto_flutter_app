@@ -8,7 +8,6 @@ class CustomWidgets {
       required Widget prefixIcon,
       int lines = 1}) {
     return Container(
-      key: Key('textField'),
       margin: EdgeInsets.symmetric(horizontal: 16),
       decoration: BoxDecoration(
         color: Colors.white,
